@@ -1,8 +1,7 @@
 {
   "name": "assessment-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,5 +11,14 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coulsen-Anderson/backend-assessment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Coulsen-Anderson/backend-assessment/issues"
+  },
+  "homepage": "https://github.com/Coulsen-Anderson/backend-assessment#readme",
+  "description": ""
 }

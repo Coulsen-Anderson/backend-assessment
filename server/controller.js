@@ -1,3 +1,7 @@
+const weapons = ['Energy sword', 'Assault Rifle', 'Plasma Rifle']
+
+
+
 module.exports = {
 
     getCompliment: (req, res) => {
@@ -8,6 +12,34 @@ module.exports = {
         let randomCompliment = compliments[randomIndex];
       
         res.status(200).send(randomCompliment);
+    },
+
+    getWeapons: (req, res) => {
+        res.status(200).send(weapons)
+    },
+
+    addWeapon: (req, res) => {
+        let {item} = req.body
+        weapons.push(item)
+        res.status(200).send(weapons)
+        
+    },
+
+    deleteWeapon: (req, res) => {
+        let index = req.params.id
+
+        weapons.splice(index, 1)
+
+        res.status(200).send(weapons)
+    },
+
+    editWeapon: (req, res) => {
+        let index = req.params.id
+        let {item} = req.body
+
+        weapons.splice(index, 1, item)
+
+        res.status(200).send(weapons)
     }
 
 }
